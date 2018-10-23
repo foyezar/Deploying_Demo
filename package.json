@@ -1,0 +1,17 @@
+{
+  "name": "DeployingDemo",
+  "version": "1.0.0",
+  "engines": {
+    "yarn": "1.9.4"
+  },
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Foyez Ahmed",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "2.6.1",
+    "express": "4.16.4"
+  }
+}
