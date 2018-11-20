@@ -1,4 +1,4 @@
-# Heroku
+# Heroku (Deploying App)
 
 ## Setup Heroku App
 ```
@@ -16,14 +16,43 @@ $ heroku keys:remove <email>
 
 $ ssh -v git@heroku.com
 # test the connection
+```
 
+## Create heroku app:
+```
 $ heroku create
 or
 $ heroku create <herokuapp_name>
 # create heroku
+```
 
-$ git push heroku
+## Add heroku addons: (Have to verify account to add addons)
+```
+$ heroku addons:create mongolab:sandbox
+```
+
+## Add database to mlab:
+```
+create new > plan type (sandbox) > AWS Region (US) > Database Name
+create user > username & password
+mongodb://<dbuser>:<dbpassword>@ds113134.mlab.com:13134/node-todo-api
+```
+## Add custom heroku environment variable:
+```
+ENV Variable:
+heroku app settings > Config vars
+KEY: MONGODB_URI & VALUE: mongodb://<dbuser>:<dbpassword>@ds113134.mlab.com:13134/node-todo-api
+or
+$ heroku config:set MONGODB_URI=mongodb://<dbuser>:<dbpassword>@ds113134.mlab.com:13134/node-todo-api
+```
+
+## Upload to heroku & open link:
+```
+$ git push heroku master
 # upload to heroku 
+
+$ heroku logs
+# show server logs
 
 $ heroku open
 # open the link
