@@ -44,6 +44,8 @@ heroku app settings > Config vars
 KEY: MONGODB_URI & VALUE: mongodb://<dbuser>:<dbpassword>@ds113134.mlab.com:13134/node-todo-api
 or
 $ heroku config:set MONGODB_URI=mongodb://<dbuser>:<dbpassword>@ds113134.mlab.com:13134/node-todo-api
+$ heroku config:get MONGODB_URI - get the value of MONGODB_URI env variable
+$ heroku config:unset NAME - remove the NAME env variable
 ```
 
 ## Upload to heroku & open link:
